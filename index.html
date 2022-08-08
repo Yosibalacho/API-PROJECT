@@ -12,9 +12,16 @@
       crossorigin="anonymous"
     />
     <script src="main.js" defer></script>
+    <script src="pages/home/home.js" defer></script>
+    <script src="pages/news/news.js" defer></script>
+    <script src="pages/about/about.js" defer></script>
+    <script src="pages/contact us/contact-us.js" defer></script>
+    <script src="pages/live-highlights/live-highlights.js" defer></script>
+    <script src="pages/tables/tables.js" defer></script>
+    <script src="pages/transfer/transfer.js" defer></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button
@@ -28,42 +35,33 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item" onclick="switchPages('home')">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <li class="nav-item" onclick="switchPages('Home')">
+              <a class="nav-link active text-light" aria-current="page" href="#">HOME</a>
             </li>
-            <li class="nav-item" onclick="switchPages('cards')">
-              <a class="nav-link active" aria-current="page" href="#">Cards</a>
-            </li>
-            <li class="nav-item" onclick="switchPages('users')">
-              <a class="nav-link active" aria-current="page" href="#">Users</a>
-            </li>
-            <li class="nav-item" onclick="switchPages('about')">
-              <a class="nav-link active" aria-current="page" href="#">About</a>
-            </li>
-            <li class="nav-item" onclick="switchPages('contact_us')">
-              <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
-            </li>
-            <!-- <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <li class="nav-item" onclick="switchPages('Live-Highlights')">
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >LIVE & HIGHLIGHTS</a
               >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li> -->
-              <!-- </ul>
-            </li> --> 
+            </li>
+            <li class="nav-item" onclick="switchPages('News')">
+              <a class="nav-link active text-light" aria-current="page" href="#">NEWS</a>
+            </li>
+            <li class="nav-item" onclick="switchPages('Transfer')">
+              <a class="nav-link active text-light" aria-current="page" href="#">TRANSFER</a>
+            </li>
+            <li class="nav-item" onclick="switchPages('Tables')">
+              <a class="nav-link active text-light" aria-current="page" href="#">TABLES</a>
+            </li>
+            <li class="nav-item" onclick="switchPages('About')">
+              <a class="nav-link active text-light" aria-current="page" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item" onclick="switchPages('Contact_us')">
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >CONTACT US</a
+              >
+            </li>
           </ul>
           <form class="d-flex" role="search">
             <input
@@ -104,7 +102,8 @@
         </div>
       </div>
     </nav> -->
-    <div id="myD"></div>
+    <div id="my_container" class=" container-fluid d-flex justify-content-between flex-wrap mt-3 mb-3 ">
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
