@@ -19,6 +19,7 @@
     <script src="pages/live-highlights/live-highlights.js" defer></script>
     <script src="pages/tables/tables.js" defer></script>
     <script src="pages/transfer/transfer.js" defer></script>
+    <script src="pages/scores/scores.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-dark">
@@ -35,27 +36,42 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item" onclick="switchPages('Home')">
-              <a class="nav-link active text-light" aria-current="page" href="#">HOME</a>
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >HOME</a
+              >
             </li>
             <li class="nav-item" onclick="switchPages('Live-Highlights')">
               <a class="nav-link active text-light" aria-current="page" href="#"
                 >LIVE & HIGHLIGHTS</a
               >
             </li>
+            <li class="nav-item" onclick="switchPages('Scores')">
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >SCORES</a
+              >
+            </li>
             <li class="nav-item" onclick="switchPages('News')">
-              <a class="nav-link active text-light" aria-current="page" href="#">NEWS</a>
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >NEWS</a
+              >
             </li>
             <li class="nav-item" onclick="switchPages('Transfer')">
-              <a class="nav-link active text-light" aria-current="page" href="#">TRANSFER</a>
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >TRANSFER</a
+              >
             </li>
             <li class="nav-item" onclick="switchPages('Tables')">
-              <a class="nav-link active text-light" aria-current="page" href="#">TABLES</a>
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >TABLES</a
+              >
             </li>
             <li class="nav-item" onclick="switchPages('About')">
-              <a class="nav-link active text-light" aria-current="page" href="#">ABOUT</a>
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >ABOUT</a
+              >
             </li>
             <li class="nav-item" onclick="switchPages('Contact_us')">
               <a class="nav-link active text-light" aria-current="page" href="#"
@@ -63,47 +79,13 @@
               >
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
-    <!-- <nav class="navbar navbar-dark bg-dark">
-      </nav> -->
-    <!-- <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-          </div>
-        </div>
-      </div>
-    </nav> -->
-    <div id="my_container" class=" container-fluid d-flex justify-content-between flex-wrap mt-3 mb-3 ">
-    </div>
+    <div
+      id="my_container"
+      class="container-fluid d-flex justify-content-between flex-wrap mt-3 mb-3"
+    ></div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

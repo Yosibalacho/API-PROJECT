@@ -14,24 +14,27 @@ async function getTransferApi() {
       .then((response) => response.json())
       .then((response) => {
         let transferData = response.currentSeason.transferArrivals;
-        console.log(transferData);
-        showData(transferData);
-        function showData(data) {
-          for (let i = 0; i < data.length; i++) {
-            document.querySelector("#my_container").innerHTML += `
-             <div class="container d-flex  justify-content-around align-items-baseline ">
-             <p>Player</p><p>Name</p><p>Club</p><p>Move To</p>
-             </div>
-             <div class="container d-flex mb-3 border-start  border-4 border-dark  justify-content-around align-items-center " style="height:120px ;" >
-           <img class="img-fluid    " src="${data[i].playerImage}" alt="" style="height:80px ;" >
-           <p class="">${data[i].playerName}</p>
-           <p class="">${data[i].clubName}</p>
-           <div> <img class="img-fluid rounded mt-2" src="${data[i].clubImage}" alt="" style="height:80px ;" >   </div>
-    </div>`;
-          }
+        for (let i = 0; i < transferData.length; i++) {
+          document.querySelector(
+            "#my_container"
+          ).innerHTML += ` <div class="card mb-3" style="max-width: 350px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="${transferData[i].playerImage}" class="img-fluid rounded-start" alt="...">
+         
+              </div>
+              <div class="col-md-4">
+              <img src="${transferData[i].clubImage}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><p class="">${transferData[i].playerName}</p></h5>
+                  <p class="card-text"> 
+                  <p class="">${transferData[i].clubName}</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>`;
         }
       });
-    // show transfers cards functiion
   } catch (error) {
     console.log(error);
   }
@@ -39,6 +42,10 @@ async function getTransferApi() {
 
 function transferPage() {
   localStorage.setItem("page", "Transfer");
+  document.querySelector("#my_container").innerHTML = "";
   //   document.querySelector("#my_container").innerHTML = `<h1>transfer</h1>`;
   getTransferApi();
+}
+{
+  /**/
 }

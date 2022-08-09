@@ -1,8 +1,8 @@
-async function getTransferApi() {
+async function getNewsApi() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key":'d3eb111f95mshd527b5b45c89210p11ba62jsn954d267215b6',
+      "X-RapidAPI-Key": "d3eb111f95mshd527b5b45c89210p11ba62jsn954d267215b6",
       "X-RapidAPI-Host": "livescore6.p.rapidapi.com",
     },
   };
@@ -10,23 +10,34 @@ async function getTransferApi() {
     fetch("https://livescore6.p.rapidapi.com/news/v2/list", options)
       .then((response) => response.json())
       .then((response) => {
-        for (let i = 0; i < 21; i++) {
-          document.querySelector(
-            "#my_container"
-          ).innerHTML += `<h1>${response.topStories[i].mainMedia.gallery.alt}</h1>
-          <img src="${response.topStories[i].mainMedia.gallery.url}">`;
+        for (let i = 0; i < 30; i++) {
+          document.querySelector("#my_container").innerHTML += `
+          <div class="card mb-3" style="max-width: 50vw;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="${response.topStories[i].mainMedia.gallery.url}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">${response.topStories[i].mainMedia.gallery.alt}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+          `;
         }
-        console.log(response.topStories);
       });
   } catch (err) {
     console.error(err);
   }
 }
-getTransferApi()
+getTransferApi();
 function newsPage() {
   localStorage.setItem("page", "News");
-  getTransferApi()
-  // document.querySelector("#my_container").innerHTML = `<iframe src="https://www.scorebat.com/embed/livescore/?token=MjI4MzBfMTY1OTg3OTQxOF8xODBjNDVjZGIzZTRiNjkxOTc0YzUyYmIyZTBiNTUyYjQ1OTFhMDdj" frameborder="0" width="600" height="760" allowfullscreen allow='autoplay; fullscreen' style="width:100%;height:760px;overflow:hidden;display:block;" class="_scorebatEmbeddedPlayer_"></iframe><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://www.scorebat.com/embed/embed.js?v=arrv'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'scorebat-jssdk'));</script>`;
+  document.querySelector("#my_container").innerHTML = "";
+  getNewsApi();
 }
 // async function getApi() {
 //   const options = {

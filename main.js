@@ -6,6 +6,9 @@ function switchPages(value) {
     case "Live-Highlights":
       live_highlightsPage();
       break;
+    case "Scores":
+      scoresPage();
+      break;
     case "News":
       newsPage();
       break;
